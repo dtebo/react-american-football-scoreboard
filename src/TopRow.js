@@ -1,16 +1,14 @@
 import React from 'react';
 import Home from './Home';
+import Away from './Away';
 
 const TopRow = (props) => {
     return (
         <div>
             <div className="topRow">
-                    <Home score={props.home} />
+                    <Home team="LIONS" score={props.home} />
                     <div className="timer">00:03</div>
-                    <div className="away">
-                        <h2 className="away__name">Tigers</h2>
-                        <div className="away__score">{props.away}</div>
-                    </div>
+                    <Away team="TIGERS" score={props.away} />
                 </div>
         </div>
     );
