@@ -8,15 +8,15 @@ const Buttons = (props) => {
 
                 {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
                 <button className="homeButtons__touchdown"
-                        onClick={() => props.incrementHomeScore(props.home + 7)}>Home Touchdown</button>
+                        onClick={() => props.incrementScore("LIONS", 7)}>Home Touchdown</button>
                 <button className="homeButtons__fieldGoal"
-                        onClick={() => props.incrementHomeScore(props.home + 3)}>Home Field Goal</button>
+                        onClick={() => props.incrementScore("LIONS", 3)}>Home Field Goal</button>
                 </div>
                 <div className="awayButtons">
                 <button className="awayButtons__touchdown"
-                        onClick={() => props.incrementAwayScore(props.away + 7)}>Away Touchdown</button>
+                        onClick={() => props.incrementScore("TIGERS", 7)}>Away Touchdown</button>
                 <button className="awayButtons__fieldGoal"
-                        onClick={() => props.incrementAwayScore(props.away + 3)}>Away Field Goal</button>
+                        onClick={() => props.incrementScore("TIGERS", 3)}>Away Field Goal</button>
                 </div>
             </section>
         </div>
