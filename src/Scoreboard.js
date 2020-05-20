@@ -8,6 +8,7 @@ const Scoreboard = (props) => {
     //TODO: STEP 2 - Establish your applictaion's state with some useState hooks.  You'll need one for the home score and another for the away score.
     const [homeScore, setHomeScore] = useState(0);
     const [awayScore, setAwayScore] = useState(0);
+    const [quarter, setQuarter] = useState(1);
 
     // const teams = {
     //     "LIONS": {
@@ -33,11 +34,13 @@ const Scoreboard = (props) => {
         <div>
             <section className="scoreboard">
                 <TopRow home={homeScore} away={awayScore} />
-                <BottomRow />
+                <BottomRow quarter={quarter} />
             </section>
             <Buttons incrementScore={updateScore}
-                    home={homeScore}
-                    away={awayScore} />
+                     incrementQuarter={setQuarter}
+                     home={homeScore}
+                     away={awayScore}
+                     quarter={quarter} />
         </div>
     );
 };
