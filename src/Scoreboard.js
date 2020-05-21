@@ -46,7 +46,10 @@ const Scoreboard = (props) => {
                      incrementBallOn={setBallOn}
                      home={homeScore}
                      away={awayScore}
-                     quarter={quarter} />
+                     quarter={quarter}
+                     down={down}
+                     togo={togo}
+                     ballon={ballon} />
         </div>
     );
 };
