@@ -112,6 +112,20 @@
   justify-content: space-around;
 }
 
+.dtgboButtons{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.dtgboButtons__down,
+.dtgboButtons__togo,
+.dtgboButtons__ballposition,
+.quarterButtons_1 {
+  margin: 1.2rem;
+  border-radius: 4px;
+}
+
 .homeButtons__touchdown,
 .homeButtons__fieldGoal,
 .awayButtons__touchdown,
