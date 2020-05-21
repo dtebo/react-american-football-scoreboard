@@ -10,9 +10,9 @@ const TopRow = (props) => {
         let minutes = parseInt(timeValues[0]);
         let seconds = parseInt(timeValues[1]);
 
-        let timeString = (seconds < 10 ? '0' + seconds : seconds).toString();
-
         const timer = setInterval(() => {
+            let timeString = (seconds < 10 ? '0' + seconds : seconds).toString();
+            
             if(seconds > 0){
                 seconds -= 1;
             }
