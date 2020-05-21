@@ -5,9 +5,12 @@ const Buttons = (props) => {
         <div>
             <section className="buttons">
                 <div className="dtgboButtons">
-                    <button className="dtgbobuttons__down">Next Down</button>
-                    <button className="dtgbobuttons_togo">Update Yards</button>
-                    <button className="dtgbobuttons_ballposition">Update Position</button>
+                    <button className="dtgboButtons__down"
+                            onClick={() => props.incrementDown(props.down + 1)}>Next Down</button>
+                    <button className="dtgboButtons__togo"
+                            onClick={() => props.incrementToGo(props.togo - 4)}>Update Yards</button>
+                    <button className="dtgboButtons__ballposition"
+                            onClick={() => props.incrementBallOn(props.ballon + 20)}>Update Position</button>
                 </div>
                 <div className="homeButtons">
 
@@ -23,7 +26,7 @@ const Buttons = (props) => {
                     <button className="awayButtons__fieldGoal"
                             onClick={() => props.incrementScore("TIGERS", 3)}>Away Field Goal</button>
                 </div>
-                <div className="quarterButton">
+                <div className="quarterButtons">
                     <button className="quarterButtons_1"
                             onClick={() => props.incrementQuarter(props.quarter + 1)}>Next Quarter</button>
                 </div>

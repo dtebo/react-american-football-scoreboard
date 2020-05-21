@@ -9,6 +9,9 @@ const Scoreboard = (props) => {
     const [homeScore, setHomeScore] = useState(0);
     const [awayScore, setAwayScore] = useState(0);
     const [quarter, setQuarter] = useState(1);
+    const [down, setDown] = useState(1);
+    const [togo, setToGo] = useState(10);
+    const [ballon, setBallOn] = useState(40);
 
     // const teams = {
     //     "LIONS": {
@@ -34,10 +37,13 @@ const Scoreboard = (props) => {
         <div>
             <section className="scoreboard">
                 <TopRow home={homeScore} away={awayScore} />
-                <BottomRow quarter={quarter} />
+                <BottomRow quarter={quarter} down={down} togo={togo} ballon={ballon} />
             </section>
             <Buttons incrementScore={updateScore}
                      incrementQuarter={setQuarter}
+                     incrementDown={setDown}
+                     incrementToGo={setToGo}
+                     incrementBallOn={setBallOn}
                      home={homeScore}
                      away={awayScore}
                      quarter={quarter} />
