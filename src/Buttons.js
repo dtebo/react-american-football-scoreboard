@@ -4,6 +4,11 @@ const Buttons = (props) => {
     return(
         <div>
             <section className="buttons">
+                <div className="dtgboButtons">
+                    <button className="dtgbobuttons__down">Next Down</button>
+                    <button className="dtgbobuttons_togo">Update Yards</button>
+                    <button className="dtgbobuttons_ballposition">Update Position</button>
+                </div>
                 <div className="homeButtons">
 
                     {/* TODO STEP 4 - Now we need to attach our state setter functions to click listeners. */}
